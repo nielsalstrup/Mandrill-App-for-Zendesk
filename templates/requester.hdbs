@@ -1,0 +1,29 @@
+<table>
+<tr>
+  <td>E-mail:</td>
+  <td class="data" title="{{user.name}}">{{user.email}}</td>
+</tr>
+{{#if user.organization_id}}
+<tr>
+	<td>Organisation:</td>
+	<td class="data">{{user.organization_name}}</td>
+</tr>
+{{/if}}
+</table>
+<hr/>
+{{#if user.messages}}
+<table>
+{{#each user.messages}}
+<tr>
+  <td>{{date}}</td>
+  <td class="data" title="{{template}}">{{subject}}</td>
+  <td class="state"><div class="state {{state}}">{{state}}</div></td>
+  <td class="open">{{#if opens}}<div>åbnet</div>{{/if}}</td>
+</tr>
+{{/each}}
+</table>
+{{else}}
+<div>
+  Der er ikke sendt notifikationer de seneste 30 dage.</div>
+</div>
+{{/if}}

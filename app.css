@@ -1,0 +1,29 @@
+.data {
+  color: #696;
+  padding-left: 6px;
+}
+.state {
+	color: white;
+	text-align: center;
+	font-size: 0.9em;
+	padding: 1px;
+}
+.open {
+	font-size: 0.9em;
+	padding: 1px;
+}
+.bounced {
+	background-color: red;
+}
+.deffered {
+	background-color: orange;
+}
+.rejected {
+	background-color: red;
+}
+.sent {
+	background-color: green;
+}
+.soft-bounced {
+	background-color: orange;
+}
